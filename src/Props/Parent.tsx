@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Child} from './Child';
 
 type State = {
   count: number,
@@ -7,21 +8,19 @@ type State = {
 
 const initialState = {
   count: 0,
-  name: '',
+  name: 'x',
 }
 
-class LogicComponent extends React.Component<{}, State>{
+export class Parent extends React.Component<{}, State>{
   state: State = initialState;
 
-  onClick = (e: React.MouseEvent<HTMLDivElement>) => this.setState({ ...this.state, count: this.state.count + 1 });
+  countUp = () => this.setState({ ...this.state, count: this.state.count + 1 });
 
   onUpdate = (input: string) => this.setState({ ...this.state, name: this.state.name })
 
   render() {
     return (
-      this.props.children
+      <Child count={this.state.count} name={this.state.name} countUp={this.countUp}   / > 
     )
   }
 };
-
-export default LogicComponent;
