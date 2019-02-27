@@ -1,9 +1,15 @@
 import * as React from 'react';
+import { Parent } from './Props/Parent';
+import { Implementation } from './RenderProps/LogicComponent';
+
 
 function App() {
   return (
     <div className="App">
-123
+      <div> Parent - Child with Props </div>
+      <Parent />
+      <br/>
+      <Implementation/>
     </div>
   );
 }
