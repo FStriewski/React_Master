@@ -1,25 +1,12 @@
 import * as React from 'react';
 import { RenderComponent } from './RenderComponent';
+import { State } from '../types';
+import { initialState } from '../App';
 
-type State = {
-  count: number;
-  name: string;
-};
 
 // Props that are handed to the render component, from logic components state.
 type RenderProps = {
-  children: (count: number, name: string) => React.ReactNode;
-  
-};
-
-type Props = {
-  onClick: () => void;
-}
-
-
-const initialState = {
-  count: 0,
-  name: ''
+  children: (count: number, name: string) => React.ReactNode; 
 };
 
 // This component provides reusable logic
