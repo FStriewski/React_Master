@@ -9,7 +9,7 @@ type Props = {
 export const Child = ({ count, name, countUp }: Props) => (
   <React.Fragment>
     <div>
-    I am just receiving props taht I render.
+    I am just receiving props that I render.
     Count {count} and name {name}.
     </div>
     <button onClick={countUp}>Count up</button>

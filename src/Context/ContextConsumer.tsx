@@ -7,8 +7,9 @@ const ContextConsumer = () => (
     <someContext.Consumer>
         {(value: ContextProp) => (
             <React.Fragment>
-                <div>This is{value.state.name}</div>
-                <div>With a count of {value.state.count}</div>
+                <br/>
+                <div>This is{value.state.name} with a count of {value.state.count}</div>
+                <button onClick={value.increaseCount}>Count up</button>
             </React.Fragment>
         )}
     </someContext.Consumer>

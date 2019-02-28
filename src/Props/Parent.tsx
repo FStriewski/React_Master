@@ -8,7 +8,7 @@ type State = {
 
 const initialState = {
   count: 0,
-  name: 'x',
+  name: ' from parent by props',
 }
 
 export class Parent extends React.Component<{}, State>{

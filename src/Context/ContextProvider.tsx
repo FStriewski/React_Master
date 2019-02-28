@@ -20,6 +20,7 @@ class ContextProvider extends React.Component<{}, State>{
         return (
             <someContext.Provider value={{
                 state: this.state,
+                increaseCount: this.increaseCount,
             }}>
             {this.props.children}
             </someContext.Provider>

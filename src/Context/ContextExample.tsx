@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { State } from '../types';
 import ContextProvider from './ContextProvider';
-import { Component1, Component2, Component3, Component4 } from './IntermediateComponents';
+import { Component1, Component2, Component3 } from './IntermediateComponents';
 import ContextConsumer from './ContextConsumer';
-
-type RenderProps = {
-    // children: () => React.ReactNode,
-};
+import { Style } from '../styles/style';
 
 class ContextExample extends React.Component<{}, {}>{
 
@@ -14,17 +11,16 @@ class ContextExample extends React.Component<{}, {}>{
     render() {
         return (
             <ContextProvider>
-                <Component1>
-                    <Component2>
-                        <Component3>
-                            <Component4>
-
-                                <ContextConsumer/>
-
-                            </Component4>
-                        </Component3>
-                    </Component2>
-                </Component1>
+                <Style>
+                <h3>Context API:</h3>
+                    <Component1>
+                        <Component2>
+                            <Component3>
+                                    <ContextConsumer />
+                            </Component3>
+                        </Component2>
+                    </Component1>
+                </Style>
 
             </ContextProvider>
         )

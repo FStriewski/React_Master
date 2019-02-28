@@ -11,4 +11,5 @@ export type Props = {
 
 export type ContextProp = {
     state: State,
+    increaseCount: () => void,
 };
