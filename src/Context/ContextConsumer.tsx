@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { someContext } from './ContextProvider';
-import { State } from '../types';
+import { ContextProp, State } from '../types';
 
-type Context = {
-    state: State;
-};
-
-{/*ALWAYS a function */}
+{/*ALWAYS a function */ }
 const ContextConsumer = () => (
     <someContext.Consumer>
-        {(context: Context) => { 
-            <div>This is{context.state.name}</div>
-        }}
+        {(value: ContextProp) => (
+            <React.Fragment>
+                <div>This is{value.state.name}</div>
+                <div>With a count of {value.state.count}</div>
+            </React.Fragment>
+        )}
     </someContext.Consumer>
 );
 

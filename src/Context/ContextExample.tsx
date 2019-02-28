@@ -14,17 +14,17 @@ class ContextExample extends React.Component<{}, {}>{
     render() {
         return (
             <ContextProvider>
-                {/* <Component1>
+                <Component1>
                     <Component2>
                         <Component3>
-                            <Component4> */}
+                            <Component4>
 
                                 <ContextConsumer/>
 
-                            {/* </Component4>
+                            </Component4>
                         </Component3>
                     </Component2>
-                </Component1> */}
+                </Component1>
 
             </ContextProvider>
         )

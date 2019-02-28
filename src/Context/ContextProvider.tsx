@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { State } from '../types';
+import { ContextProp, State } from '../types';
 
 // Creates context obj. Subscribers will read value from the closest matching Provider in the tree.
 // If none found, pass in a default value.
-export const someContext = React.createContext({});
+export const someContext = React.createContext({} as ContextProp);
 
 class ContextProvider extends React.Component<{}, State>{
     state = {
         count: 0,
-        name: ''
+        name: ' a name coming from provider',
     }
 
     increaseCount = () => {
@@ -21,7 +21,7 @@ class ContextProvider extends React.Component<{}, State>{
             <someContext.Provider value={{
                 state: this.state,
             }}>
-                {this.props.children}
+            {this.props.children}
             </someContext.Provider>
         )
     }
