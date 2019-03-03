@@ -3,6 +3,7 @@ import { Parent } from './Props/Parent';
 import { Implementation } from './RenderProps/LogicComponent';
 import ContextExample from './Context/ContextExample';
 import { Style } from './styles/style';
+import { Hook } from './Hooks/Hook';
 
 export const initialState = {
   count: 0,
@@ -20,6 +21,8 @@ function App() {
       <Implementation/>
       <br/>
       <ContextExample/>
+      <br/>
+      <Hook/>
     </div>
   );
 }

@@ -7,9 +7,10 @@ export type State = {
 export type Props = {
     count: number;
     name: string;
+    countUp?: () => void;
 };
 
 export type ContextProp = {
     state: State,
-    increaseCount: () => void,
+    increaseCount: (count: any) => void,
 };
